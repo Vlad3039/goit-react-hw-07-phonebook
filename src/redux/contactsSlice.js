@@ -1,8 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import Notiflix from 'notiflix';
-import { nanoid } from 'nanoid';
-
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: [

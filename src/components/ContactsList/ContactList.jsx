@@ -1,7 +1,7 @@
 import { List, ListItem } from './ContactList.styled';
 import { Contact } from './Contact/Contact';
 import { useSelector } from 'react-redux';
-import { useGetContactsQuery } from '../../api/myAPI';
+import { useGetContactsQuery } from 'api/myAPI';
 
 const getContacts = (contacts, filter) => {
   const normalizedFilter = filter.toLowerCase().trim();

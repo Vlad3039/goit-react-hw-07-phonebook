@@ -1,13 +1,10 @@
-// import PropTypes from 'prop-types';
-// import { useDispatch } from 'react-redux';
 import { Notify } from 'notiflix';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { Box } from 'components/Box/Box';
 import { Input, Button, StyledForm } from './Form.styled';
-// import { addContact } from 'redux/contactsSlice';
-import { useGetContactsQuery, usePostContactMutation } from '../../api/myAPI';
-// import { useSelector } from 'react-redux';
+
+import { useGetContactsQuery, usePostContactMutation } from 'api/myAPI';
 
 const schema = yup.object().shape({
   name: yup

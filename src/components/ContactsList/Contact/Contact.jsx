@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Button } from '../ContactList.styled';
 
-import { useDeleteContactByIdMutation } from '../../../api/myAPI';
+import { useDeleteContactByIdMutation } from 'api/myAPI';
 export const Contact = ({ id, name, number }) => {
   const [deleteContact, { isLoading }] = useDeleteContactByIdMutation();
 

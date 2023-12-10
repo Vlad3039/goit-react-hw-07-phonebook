@@ -12,22 +12,6 @@ const contactsSlice = createSlice({
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
   ],
   reducers: {
-    addContact: {
-      reducer: (state, action) => {
-        const some = state.some(
-          i => i.name.toLowerCase() === action.payload.name.toLowerCase()
-        );
-        if (some)
-          return Notiflix.Notify.failure(
-            ` ${action.payload.name} is already in contacts`
-          );
-        state.push(action.payload);
-      },
-      prepare: (name, number) => {
-        const id = nanoid();
-        return { payload: { id, name, number } };
-      },
-    },
     deleteContact(state, action) {
       return state.filter(contact => contact.id !== action.payload);
     },
